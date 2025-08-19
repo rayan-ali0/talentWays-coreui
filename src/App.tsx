@@ -1,13 +1,14 @@
 import './tailwind.css'
+import { Route,Routes } from 'react-router-dom'
+import { ManageDispute } from './Pages/ManageDispute'
 
 function App() {
 
   return (
     <>
-    <div>my routes</div>
-      {/* <Routes>
-        <Route path="/" element={<myPage />} />
-      </Routes> */}
+      <Routes>
+        <Route path="/" element={<ManageDispute />} />
+      </Routes>
     </>
   )
 }
