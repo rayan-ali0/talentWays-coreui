@@ -1,4 +1,4 @@
-import React, {type ReactNode, useState } from "react";
+import React, { ReactNode, useState } from "react";
 import { TableSkeleton } from "../skeleton/table-skeleton";
 import Empty from "../../assets/images/emtpy-state-table.png";
 import { CustomSearch } from "../custom-search/custom-search";

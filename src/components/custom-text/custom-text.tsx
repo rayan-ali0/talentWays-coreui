@@ -1,18 +1,16 @@
 import React from "react";
 
-export const TextType = {
-  H1: "h1",
-  H2: "h2",
-  H3: "h3",
-  H4: "h4",
-  H5: "h5",
-  H6: "h6",
-  P: "p",
-  SPAN: "span",
-  TITLE: "Title"
-} as const;
-
-export type TextType = typeof TextType[keyof typeof TextType];
+export enum TextType {
+  H1 = "h1",
+  H2 = "h2",
+  H3 = "h3",
+  H4 = "h4",
+  H5 = "h5",
+  H6 = "h6",
+  P = "p",
+  SPAN = "span",
+  TITLE = "Title"
+}
 
 interface TextProps {
   as: TextType;

@@ -1,4 +1,4 @@
-import React, {type FC, type ReactNode } from "react";
+import React, { FC, ReactNode } from "react";
 import arrow from "../../../assets/images/arrow-right.svg";
 import { Text, TextType } from "../../custom-text/custom-text";
 interface ITableHeader {
