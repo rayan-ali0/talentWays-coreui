@@ -8,7 +8,7 @@ import ArrowIcon from "../../assets/images/arrow.svg";
 import { CustomPagination } from "../custom-pagination/custom-pagination";
 import { TableHeader } from "./headers/table-header";
 import { CustomSystemTabs } from "../custom-system-tabs/custom-system-tabs";
-import { TableCell } from "./custom-table";
+import {type TableCell } from "./custom-table";
 
 export interface ICustomTableWithTabsProps {
   headers: string[];

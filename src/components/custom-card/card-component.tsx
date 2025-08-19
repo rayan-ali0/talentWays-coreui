@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { type ReactNode } from "react";
 import i18n from "../../i18n";
 import { AppInitializerProvider } from "../../context/initializer-context";
 import { useBreakPoint } from "../../hooks/useBreakPoint";

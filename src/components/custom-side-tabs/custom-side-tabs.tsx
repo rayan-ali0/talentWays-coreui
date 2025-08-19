@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, useEffect, useMemo, useRef } from "react";
+import React, { type FC, type ReactNode, useEffect, useMemo, useRef } from "react";
 
 export interface ISideTab {
   title: ReactNode;
@@ -23,7 +23,7 @@ export const SideTabs: FC<ISideTabsProps> = ({
   className = "h-screen",
   contentClassName = "",
 }) => {
-  const tabRefs = useRef<(HTMLLIElement | null)[]>([]);
+  const tabRefs = useRef<Array<HTMLLIElement | null>>([]);
   // Memoize active content to prevent unnecessary re-renders
   const activeContent = useMemo(() => {
     return tabs[activeTab]?.component || null;
@@ -88,22 +88,23 @@ export const SideTabs: FC<ISideTabsProps> = ({
         {tabs.map((tab, index) => (
           <div
             key={index}
-            className={`p-2 cursor-pointer  ${activeTab === index ? `border-aegold-500 md:border-e-2` : ""} ${
-              tab.disabled ? "opacity-50 cursor-not-allowed" : ""
-            }`}
+            className={`p-2 cursor-pointer  ${activeTab === index ? `border-aegold-500 md:border-e-2` : ""} ${tab.disabled ? "opacity-50 cursor-not-allowed" : ""
+              }`}
             role="presentation"
           >
             <li
-              ref={(el) => (tabRefs.current[index] = el)}
+              // ref={(el) => (tabRefs.current[index] = el)}
+              ref={(el) => {
+                tabRefs.current[index] = el;
+              }}
               role="tab"
               tabIndex={tab.disabled ? -1 : 0}
               aria-selected={activeTab === index}
               aria-disabled={tab.disabled}
               onClick={(e) => handleTabClick(index, e.currentTarget)}
               onKeyDown={(e) => handleKeyDown(e, index)}
-              className={`tab-link p-3 w-full h-full transition-colors duration-200 ${
-                activeTab === index ? "bg-aegold-100 text-aegold-500" : "hover:bg-gray-50"
-              } ${tab.disabled ? "pointer-events-none" : ""}`}
+              className={`tab-link p-3 w-full h-full transition-colors duration-200 ${activeTab === index ? "bg-aegold-100 text-aegold-500" : "hover:bg-gray-50"
+                } ${tab.disabled ? "pointer-events-none" : ""}`}
             >
               <div className="flex gap-4 items-center">
                 <span className="md:overflow-hidden md:whitespace-nowrap md:text-ellipsis text-wrap">{tab.title}</span>

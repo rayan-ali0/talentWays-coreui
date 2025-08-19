@@ -24,10 +24,29 @@ import ChevronLeftIcon from '../../assets/images/chevron-left.svg'
 import ChevronRightIcon from '../../assets/images/chevron-right.svg'
 import DarkArrowRightIcon from '../../assets/images/dark-arrow-right.svg'
 import ThreeDotsIcon from "../../assets/images/three-dots.svg";
+import AddGoldIcon from '../../assets/images/Plus.svg'
+import infoIcon from '../../assets/images/info.svg'
+import FileSvgIcon from '../../assets/images/Files.svg'
+import ClockCounterSvgIcon from '../../assets/images/ClockCounterClockwise.svg'
 
 
+export const ClockCounterIcon = (props: any) => {
+    return <img src={ClockCounterSvgIcon} {...props} />;
+};
+
+
+export const FileIcon = (props: any) => {
+    return <img src={FileSvgIcon} {...props} />;
+};
+
+export const InfoSvgIcon = (props: any) => {
+    return <img src={infoIcon} {...props} />;
+};
 export const AddWhiteSvgIcon = (props: any) => {
     return <img src={AddWhiteIcon} {...props} />;
+};
+export const AddGoldSvgIcon = (props: any) => {
+    return <img src={AddGoldIcon} {...props} />;
 };
 export const ChevronLeftSvgIcon = (props: any) => {
     return <img src={ChevronLeftIcon} {...props} />;

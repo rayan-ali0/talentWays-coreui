@@ -1,0 +1,32 @@
+{
+  "Form": {
+    "Validation": {
+      "Required": "Requis",
+      "Invalid": "Veuillez suivre la note. Le numéro de téléphone est invalide.",
+      "InvalidIban": "Le numéro de compte bancaire international (IBAN) est invalide. Veuillez entrer un IBAN valide.",
+      "InvalidIdentity": "Le numéro d'identité doit être valide, par exemple : 000-0000-0000000-0",
+      "InvalidName": "La valeur saisie ne correspond pas au format requis.",
+      "InvalidEmail": "email invalide",
+      "MinDate": "La date doit être après le {{minDate}}."
+    },
+    "Select": {
+      "Default": "Sélectionnez un",
+      "NoOptionsMessage": "Pas d'options"
+    },
+    "FileInput": {
+      "Delete": "Supprimer",
+      "Download": "Télécharger",
+      "ChooseFile": "Choisir un fichier",
+      "HintText": "Types de fichiers autorisés à joindre (‘’jpg’’, ‘’doc’’,’’docx’’,’’pdf’’)",
+      "InvalidFileType": "Le type de fichier sélectionné n'est pas autorisé.",
+      "MaxFileSize": "La taille maximale du fichier doit être de {{size}} Mo"
+    }
+  },
+  "Collapse": {
+    "SeeMore": "Voir plus",
+    "SeeLess": "Voir moins"
+  },
+  "WrittenNumber": {
+    "Only": "Seulement"
+  }
+}

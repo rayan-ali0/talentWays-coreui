@@ -1,0 +1,74 @@
+{
+  "NotFound": "Not found",
+  "Error": {
+    "Continue": "Continue",
+    "BadRequest": {
+      "Title": "Invalid Request",
+      "Description": "It seems there is an error in the entered data. Please check it and try again."
+    },
+    "Unauthorized": {
+      "Title": "Unauthorized",
+      "Description": "Your identity could not be verified. Please log in to access this content."
+    },
+    "Forbidden": {
+      "Title": "Access Denied",
+      "Description": "You do not have sufficient permissions to perform this action. Please contact the administrator if you believe this is a mistake."
+    },
+    "NotFound": {
+      "Title": "Resource Not Found",
+      "Description": "Sorry, we could not find what you are looking for. Please check the link or the data."
+    },
+    "ServerError": {
+      "Title": "Internal Server Error",
+      "Description": "An unexpected issue occurred on the server side. We are working to resolve it; please try again later."
+    },
+    "Unknown": {
+      "Title": "An Error Occurred",
+      "Description": "We encountered an unknown issue. Please try again later or contact technical support."
+    }
+  },
+  "Form": {
+    "Validation": {
+      "Required": "Required",
+      "Invalid": "The phone number format must be followed, for example: +971 xx xxx xxxx.",
+      "InvalidIban": "The International Bank Account Number (IBAN) is invalid. Please enter a valid IBAN.",
+      "InvalidIdentity": "The identity number must be valid, for example: 000-0000-0000000-0",
+      "InvalidName": "The entered value does not match the required format.",
+      "InvalidEmail": "Invalid email",
+      "MinDate": "Date must be after {{minDate}}.",
+      "MaxDate": "The date must be before {{maxDate}}.",
+      "EmptyField": "This field cannot be empty or contain only spaces",
+      "InformativeMessage": "Please enter the Emirates ID number in the approved format: X-XXXX-XXXXXXX-X",
+      "MinNumber": "The value must be greater than or equal to {{minNumber}}.",
+      "MaxNumber": "The value must be less than or equal to {{maxNumber}}.",
+      "ArabicOnly": "Please enter Arabic characters only",
+      "EnglishOnly": "Please enter English characters only",
+      "ArabicLettersOnly": "Please enter Arabic letters only (no numbers or special characters)",
+      "EnglishLettersOnly": "Please enter English letters only (no numbers or special characters)"
+    },
+    "Select": {
+      "Default": "Select one",
+      "NoOptionsMessage": "No options"
+    },
+    "FileInput": {
+      "Delete": "Delete",
+      "Download": "Download",
+      "ChooseFile": "Choose File",
+      "HintText": "Allowed file types to attach (''jpg'', ''doc'',''docx'',''pdf'')",
+      "NoFileChosen": "No file chosen",
+      "InvalidFileType": "The selected file type is not allowed.",
+      "MaxFileSizeError": "File size should not exceed {{maxSize}} MB",
+      "MaxFileSize": "Maximum file size must be {{size}} MB",
+      "FileNotReadable": "The file is not valid for upload."
+    }
+  },
+  "Collapse": {
+    "SeeMore": "Show",
+    "SeeLess": "Hide"
+  },
+  "LoadMore": "Load More",
+  "Loading": "Loading",
+  "WrittenNumber": {
+    "Only": "Only"
+  }
+}

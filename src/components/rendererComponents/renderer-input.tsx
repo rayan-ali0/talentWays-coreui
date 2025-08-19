@@ -1,11 +1,11 @@
-import React, {type CSSProperties, type FC } from "react";
-import writtenNumber from "written-number";
+import React, { type CSSProperties, type FC } from "react";
+// import writtenNumber from "written-number";
 import { CustomInputType } from "../../types/types";
-import searchIcon from "../../../assets/images/search.svg";
+import searchIcon from "../../assets/images/search.svg";
 // import i18n from "../../../i18n";
-import { CustomTextArea } from "../../custom-text-area/custom-text-area";
-import { CustomTooltip } from "../../custom-tooltip/custom-tooltip";
-import { CustomIdentityInput } from "../../custom-input/custom-identity-input";
+// import { CustomTextArea } from "../../custom-text-area/custom-text-area";
+// import { CustomTooltip } from "../../custom-tooltip/custom-tooltip";
+// import { CustomIdentityInput } from "../custom-input/custom-identity-input";
 
 export interface IRendererInputProps {
   type?: CustomInputType;
@@ -397,24 +397,24 @@ export const RendererInput: FC<IRendererInputProps> = function _RendererInput({
           {errorMessage && <p className="error-message !m-0">{errorMessage}</p>}
         </div>
       );
-    case CustomInputType.TextArea:
-      return (
-        <CustomTextArea
-          maxLength={maxLength}
-          value={value as string}
-          label={label}
-          required={required}
-          rows={row}
-          name={name}
-          disabled={isDisabled}
-          placeholder={placeholder}
-          onChange={handleChange}
-          maxAllowedCharacters={maxAllowedCharacters}
-          error={errorMessage}
-          isArabic={isArabic}
-          className={`disabled:placeholder:text-aeblack-900`}
-        />
-      );
+    // case CustomInputType.TextArea:
+    //   return (
+    //     <CustomTextArea
+    //       maxLength={maxLength}
+    //       value={value as string}
+    //       label={label}
+    //       required={required}
+    //       rows={row}
+    //       name={name}
+    //       disabled={isDisabled}
+    //       placeholder={placeholder}
+    //       onChange={handleChange}
+    //       maxAllowedCharacters={maxAllowedCharacters}
+    //       error={errorMessage}
+    //       isArabic={isArabic}
+    //       className={`disabled:placeholder:text-aeblack-900`}
+    //     />
+    //   );
     case CustomInputType.Password:
       return (
         <div
@@ -529,23 +529,23 @@ export const RendererInput: FC<IRendererInputProps> = function _RendererInput({
           {errorMessage && <p className="error-message">{errorMessage}</p>}
         </div>
       );
-    case CustomInputType.IDENITITY:
-      return (
-        <CustomIdentityInput
-            label={label}
-            name={name}
-            error={errorMessage}
-            value={value as string}
-            onChange={handleChange}
-            required={required}
-            isDisabled={isDisabled}
-            placeholder={placeholder || "000-0000-0000000-0"}
-            className={className || ""}
-            labelStyle={labelStyle}
-            isArabic={isArabic}
-            tooltipText={i18n.t("Form.Validation.InformativeMessage")}
-        />
-      );
+    // case CustomInputType.IDENITITY:
+    //   return (
+    //     <CustomIdentityInput
+    //         label={label}
+    //         name={name}
+    //         error={errorMessage}
+    //         value={value as string}
+    //         onChange={handleChange}
+    //         required={required}
+    //         isDisabled={isDisabled}
+    //         placeholder={placeholder || "000-0000-0000000-0"}
+    //         className={className || ""}
+    //         labelStyle={labelStyle}
+    //         isArabic={isArabic}
+    //         tooltipText={i18n.t("Form.Validation.InformativeMessage")}
+    //     />
+    //   );
 
     case CustomInputType.TextOnly:
       return (
@@ -600,43 +600,43 @@ export const RendererInput: FC<IRendererInputProps> = function _RendererInput({
           {errorMessage && <p className="error-message">{errorMessage}</p>}
         </div>
       );
-    case CustomInputType.NumberToText: {
-      writtenNumber.defaults.lang = i18n.language;
+    // case CustomInputType.NumberToText: {
+    //   writtenNumber.defaults.lang = i18n.language;
 
-      const getWrittenNumber = () => {
-        if (relatedFieldValue) {
-          const num = parseInt(relatedFieldValue as string, 10);
-          if (isNaN(num)) {
-            return "";
-          }
-          return writtenNumber(num);
-        }
-        return "";
-      };
+    //   const getWrittenNumber = () => {
+    //     if (relatedFieldValue) {
+    //       const num = parseInt(relatedFieldValue as string, 10);
+    //       if (isNaN(num)) {
+    //         return "";
+    //       }
+    //       return writtenNumber(num);
+    //     }
+    //     return "";
+    //   };
 
-      return (
-        <div
-          className={
-            errorMessage ? "aegov-form-control max-md:control-sm control-error" : "aegov-form-control max-md:control-sm"
-          }
-        >
-          <label style={{ ...labelStyle }} className={required ? "required" : ""}>
-            {label}
-          </label>
-          <div className="form-control-input">
-            <input
-              type="text"
-              value={getWrittenNumber() as string}
-              name={name}
-              placeholder={placeholder}
-              // onChange={handleChange}
-              className={`rounded-md disabled:placeholder:text-aeblack-900 ${className ? className : ""}`}
-            />
-          </div>
-          {errorMessage && <p className="error-message">{errorMessage}</p>}
-        </div>
-      );
-    }
+    //   return (
+    //     <div
+    //       className={
+    //         errorMessage ? "aegov-form-control max-md:control-sm control-error" : "aegov-form-control max-md:control-sm"
+    //       }
+    //     >
+    //       <label style={{ ...labelStyle }} className={required ? "required" : ""}>
+    //         {label}
+    //       </label>
+    //       <div className="form-control-input">
+    //         <input
+    //           type="text"
+    //           value={getWrittenNumber() as string}
+    //           name={name}
+    //           placeholder={placeholder}
+    //           // onChange={handleChange}
+    //           className={`rounded-md disabled:placeholder:text-aeblack-900 ${className ? className : ""}`}
+    //         />
+    //       </div>
+    //       {errorMessage && <p className="error-message">{errorMessage}</p>}
+    //     </div>
+    //   );
+    // }
     default:
       return (
         <div

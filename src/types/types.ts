@@ -1,6 +1,6 @@
 import {type CSSProperties } from "react";
 // import { IAttachment } from "@moj/common";
-import { ICustomSelectItem } from "../components";
+// import { ICustomSelectItem } from "../components";
 
 export enum CustomInputType {
   TextArea = "TextArea",
@@ -38,13 +38,13 @@ export interface FormInputData {
   title: string;
   regex?: Regex;
   placeholder: string;
-  value: Date | string | number | boolean | undefined | null | ICustomSelectItem[];
+  // value: Date | string | number | boolean | undefined | null | ICustomSelectItem[];
   validation: string;
   type: CustomInputType;
   fieldType?: CustomInputType;
   isDisabled: boolean;
   width: string;
-  options?: ICustomSelectItem[];
+  // options?: ICustomSelectItem[];
   hidden?: boolean;
   textColor?: string;
   minDate?: Date | string;
@@ -57,7 +57,7 @@ export interface FormInputData {
   noSpace?: string;
   blockMargins?: string;
   labelStyleClassName?: string;
-  fetchOptions?: (searchKeyword: any) => Promise<ICustomSelectItem[]>;
+  // fetchOptions?: (searchKeyword: any) => Promise<ICustomSelectItem[]>;
   loadMore?: () => Promise<void>;
   design?: string;
   maxNumber?: number;
@@ -67,7 +67,7 @@ export interface FormInputData {
   errorMessage?: string;
   selectClassName?: string;
   inputClassName?: string;
-  fileOnRead?: IAttachment | undefined;
+  // fileOnRead?: IAttachment | undefined;
   maxLength?: number;
   minLength?: number;
   userId?: string;
