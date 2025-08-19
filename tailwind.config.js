@@ -14,7 +14,6 @@ export default {
     require('@aegov/design-system'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
-    require('tailwind-scrollbar'),
 
   ],
 }

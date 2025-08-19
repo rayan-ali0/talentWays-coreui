@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" aria-hidden="true">
+  <!-- Red circular background -->
+  <circle cx="128" cy="128" r="104" fill="#b52520"/>
+  
+  <!-- White exclamation mark paths -->
+  <circle cx="128" cy="84" r="12" fill="white"/>
+  <path d="M136,168a8,8,0,0,1-16,0V128a8,8,0,0,1,16,0Z" fill="white"/>
+</svg>
