@@ -49,19 +49,12 @@ export const ManageDispute = () => {
                 <CustomBanner title={pageTitle} isArabic={true} />
             </section>
             <section className='flex flex-col gap-4'>
-
-                <div className='h-[500px]'>
                     <SideTabs
                         tabs={tabs}
                         activeTab={activeTab}
                         onTabChange={(index) => setActiveTab(index)}
-                        // tabsClassName="w-1/5"
                         className='h-auto'
                     />
-                </div>
-
-
-
             </section>
 
         </main>

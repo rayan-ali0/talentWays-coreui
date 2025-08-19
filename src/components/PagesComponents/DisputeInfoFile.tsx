@@ -12,10 +12,10 @@ export const DisputeInfoFile = () => {
         <CardComponent
           mainTitle="معلومات ملف المنازعة"
           withHeaders={true}
-          withBorder={true}   
+          withBorder={true}
           data={[
             { label: "رقم الملف", value: "D01/2014" },
-            { label: "حالة الملف", value:<CustomTag color="text-aegreen-800" bg="bg-aegreen-100" className='w-[111px] h-[32px] flex justify-center items-center font-semibold' text="قيد التداول" /> },
+            { label: "حالة الملف", value: <CustomTag color="text-aegreen-800" bg="bg-aegreen-100" className='w-[111px] h-[32px] flex justify-center items-center font-semibold' text="قيد التداول" /> },
             { label: "تاريخ الإنشاء", value: "25/12/2023" },
             { label: "تاريخ التحديث", value: "25/12/2023" },
           ]}
@@ -23,7 +23,8 @@ export const DisputeInfoFile = () => {
           isArabic={false}
           containerClassName="shadow-card [&>*:first-child]:border-b-0"
 
-        />      </section>
+        />
+      </section>
       <section className='flex justify-end'>
         <Button text="إلغاء" isLoading={false} type='reset' className='btn-outline w-[82px] h-[48px]' />
       </section>

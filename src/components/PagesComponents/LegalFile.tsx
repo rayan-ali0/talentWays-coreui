@@ -8,6 +8,7 @@ import { CustomInputType } from "../../types/types";
 import { CustomTableWithTabs } from '../custom-table/custom-table-with-tabs'
 import { type TableCell } from '../custom-table/custom-table'
 import { ViewSvgIcon } from '../icons/icons'
+import { CustomTag } from '../custom-tag/custom-tag'
 
 
 export const LegalFile = () => {
@@ -19,40 +20,22 @@ export const LegalFile = () => {
 
     const disputeRows: TableCell[] = [
         {
-            cells: ["2022/45678", "ملف توجيه اسري", "15/03/2022", "15/03/2022", <span className="text-green-500">متداولة</span>, <ViewSvgIcon />]
+            cells: ["2022/45678", "ملف توجيه اسري", "15/03/2022", "15/03/2022", <CustomTag color="text-aegreen-800" bg="bg-aegreen-100" className='w-[111px] h-[32px] flex justify-center items-center font-semibold' text="متداولة" />, <ViewSvgIcon />]
         },
         {
-            cells: ["2023/11235", "ملف وساطة وتوثيق", "05/09/2023", "05/09/2023", <span className="text-red-500">مفصولة</span>, <ViewSvgIcon />]
+            cells: ["2023/11235", "ملف وساطة وتوثيق", "05/09/2023", "05/09/2023",  <CustomTag color="text-aered-800" bg="bg-aered-100" className='w-[111px] h-[32px] flex justify-center items-center font-semibold' text="مفصولة" />, <ViewSvgIcon />]
         },
         {
-            cells: ["2021/77899", "ملف دعوى", "28/11/2021", "28/11/2021", <span className="text-blue-500">في انتظار إجراءك</span>, <ViewSvgIcon />]
+            cells: ["2021/77899", "ملف دعوى", "28/11/2021", "28/11/2021",  <CustomTag color="text-techblue-800" bg="bg-techblue-100" className='w-[111px] h-[32px] flex justify-center items-center font-semibold' text="في انتظار اجراءك" />, <ViewSvgIcon />]
         },
         {
-            cells: ["2021/77899", "أمر على عريضة", "28/11/2021", "28/11/2021", <span className="text-green-500">متداولة</span>, <ViewSvgIcon />]
+            cells: ["2021/77899", "أمر على عريضة", "28/11/2021", "28/11/2021",  <CustomTag color="text-aegreen-800" bg="bg-aegreen-100" className='w-[111px] h-[32px] flex justify-center items-center font-semibold' text="متداولة" />, <ViewSvgIcon />]
         }
     ];
 
 
     return (
         <div className='flex flex-col gap-8'>
-            {/* <section className='flex justify-between'>
-                <Text as={TextType.H4} text="الملفات القضائية (القيود)" isArabic={true} className='' />
-                <Button text="إضافة قيد " isLoading={false} type='button' icon={<AddGoldSvgIcon />} className='btn-soft w-[158px] h-[48px]' />
-            </section> */}
-
-            {/* <section className='flex justify-end gap-5'>
-                <RendererInput
-                    type={CustomInputType.Search} 
-                    maxAllowedCharacters={30}
-                    name="search"
-                    placeholder="ابحث بالرقم او بالإسم"
-                    value={searchValue}
-                    onChange={handleSearchChange}
-                    className='w-[496px] h-[48px] control-secondary'
-                />
-                <Button text="بحث" isLoading={false} type='button' className='btn-outline w-[77px] h-[48px]' />
-            </section> */}
-
             <section>
                 <CustomTableWithTabs
                     headers={["رقم الملف", "نوع الملف", "تاريخ الإصدار", "تاريخ التحديث", "الحالة", "الإجراءات"]}
