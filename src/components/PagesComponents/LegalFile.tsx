@@ -1,10 +1,5 @@
 import { useState } from 'react'
-import { Text } from '../custom-text/custom-text'
-import { TextType } from '../custom-text/custom-text'
 import { Button } from '../custom-button/custom-button'
-import { AddGoldSvgIcon } from '../icons/icons'
-import { RendererInput } from '../rendererComponents/renderer-input'
-import { CustomInputType } from "../../types/types";
 import { CustomTableWithTabs } from '../custom-table/custom-table-with-tabs'
 import { type TableCell } from '../custom-table/custom-table'
 import { ViewSvgIcon } from '../icons/icons'
@@ -14,8 +9,8 @@ import { CustomTag } from '../custom-tag/custom-tag'
 export const LegalFile = () => {
     const [searchValue, setSearchValue] = useState("");
 
-    const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchValue(event.target.value);
+    const handleSearchChange = (keyword:string) => {
+        setSearchValue(keyword);
     };
 
     const disputeRows: TableCell[] = [
@@ -45,10 +40,11 @@ export const LegalFile = () => {
                     title="الملفات القضائية (القيود)"
                     buttonActionText="إضافة قيد"
                     buttonAction={() => console.log("Add row")}
-                    handleSearch={(keyword) => console.log("Search", keyword)}
+                    handleSearch={(keyword) => handleSearchChange(keyword)}
                     isArabic={true}
                     searchPlaceholder="ابحث بالرقم او بالإسم"
                     searchLabel="بحث"
+                    
                 />
 
             </section>

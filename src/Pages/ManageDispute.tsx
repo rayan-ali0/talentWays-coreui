@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { CustomBanner } from '../components/custom-banner/custom-banner'
 import { DisputeInfoFile } from '../components/PagesComponents/DisputeInfoFile'
-import { Button } from '../components/custom-button/custom-button'
 import { SideTabs, type ISideTab } from '../components/custom-side-tabs/custom-side-tabs'
 import { LegalFile } from '../components/PagesComponents/LegalFile'
 import { InfoSvgIcon } from '../components/icons/icons'
@@ -52,8 +51,11 @@ export const ManageDispute = () => {
                     activeTab={activeTab}
                     onTabChange={(index) => setActiveTab(index)}
                     className='h-auto'
-                    tabsClassName='lg:w-[270px]'
-
+                    tabsClassName="
+                          lg:w-[270px]
+                          [&_li[aria-selected='true']]:bg-aegold-100 
+                           [&_li[aria-selected='true']]:hover:bg-aegold-100
+                          "
                 />
             </section>
         </main>
