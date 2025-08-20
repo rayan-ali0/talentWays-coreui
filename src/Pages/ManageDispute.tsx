@@ -54,8 +54,10 @@ export const ManageDispute = () => {
                     tabsClassName="
                           lg:w-[270px]
                           [&_li[aria-selected='true']]:bg-aegold-100 
-                           [&_li[aria-selected='true']]:hover:bg-aegold-100
-                          "
+                          [&_li[aria-selected='true']]:hover:bg-aegold-100
+                          [&_li]:h-[45px]
+                          [&_ul>div:nth-child(1)]:me-[-2px]
+                            "
                 />
             </section>
         </main>
