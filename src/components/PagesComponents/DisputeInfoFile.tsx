@@ -21,7 +21,7 @@ export const DisputeInfoFile = () => {
           ]}
           gridClassName="grid-cols-2"
           isArabic={false}
-          containerClassName="shadow-card [&>*:first-child]:border-b-0"
+          containerClassName="shadow-card [&>*:first-child]:border-b-0 p-5"
 
         />
       </section>

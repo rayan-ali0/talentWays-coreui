@@ -7,16 +7,15 @@ import { LegalFile } from '../components/PagesComponents/LegalFile'
 import { InfoSvgIcon } from '../components/icons/icons'
 import { FileIcon } from '../components/icons/icons'
 import { ClockCounterIcon } from '../components/icons/icons'
-import  { FileHistory } from '../components/PagesComponents/FileHistory'
+import { FileHistory } from '../components/PagesComponents/FileHistory'
 
 export const ManageDispute = () => {
     const [pageTitle, setPageTitle] = useState("ملف منازعة D01/2014")
     const [activeTab, setActiveTab] = useState(0);
-    console.log(activeTab)
     const tabs: ISideTab[] = [
         {
             title:
-                <div className='flex flex-row-reverse gap-3'>
+                <div className={`flex flex-row-reverse gap-3`}>
                     <span>معلومات الملف</span>
                     <InfoSvgIcon />
                 </div>
@@ -24,7 +23,6 @@ export const ManageDispute = () => {
             component: <DisputeInfoFile />,
         },
         {
-
             title:
                 <div className='flex flex-row-reverse gap-3'>
                     <span>  الملفات القضائية</span>
@@ -35,28 +33,29 @@ export const ManageDispute = () => {
         {
             title:
                 <div className='flex flex-row-reverse gap-3'>
-                    <span>               سجل الملف  </span>
+                    <span>    سجل الملف  </span>
                     <ClockCounterIcon />
                 </div>,
-            component: <FileHistory/>,
+            component: <FileHistory />,
         },
     ];
 
     return (
         <main className=' flex flex-col gap-8 p-5'>
-
             <section>
-                <CustomBanner title={pageTitle} isArabic={true} />
+                <CustomBanner title={pageTitle} isArabic={true} className='min-h-[100px]' />
             </section>
             <section className='flex flex-col gap-4'>
-                    <SideTabs
-                        tabs={tabs}
-                        activeTab={activeTab}
-                        onTabChange={(index) => setActiveTab(index)}
-                        className='h-auto'
-                    />
-            </section>
+                <SideTabs
 
+                    tabs={tabs}
+                    activeTab={activeTab}
+                    onTabChange={(index) => setActiveTab(index)}
+                    className='h-auto'
+                    tabsClassName='lg:w-[270px]'
+
+                />
+            </section>
         </main>
     )
 }
