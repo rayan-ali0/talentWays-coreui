@@ -56,7 +56,7 @@ export const ManageDispute = () => {
                           [&_li[aria-selected='true']]:bg-aegold-100 
                           [&_li[aria-selected='true']]:hover:bg-aegold-100
                           [&_li]:h-[45px]
-                          [&_ul>div:nth-child(1)]:me-[-2px]
+                          [&_ul>div]:me-[-2px]
                             "
                 />
             </section>
