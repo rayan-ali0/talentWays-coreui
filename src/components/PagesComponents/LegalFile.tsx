@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Button } from '../custom-button/custom-button'
 import { CustomTableWithTabs } from '../custom-table/custom-table-with-tabs'
+import {CustomTable} from '../custom-table/custom-table'
 import { type TableCell } from '../custom-table/custom-table'
 import { ViewSvgIcon } from '../icons/icons'
 import { CustomTag } from '../custom-tag/custom-tag'
@@ -32,7 +33,7 @@ export const LegalFile = () => {
     return (
         <div className='flex flex-col gap-8'>
             <section>
-                <CustomTableWithTabs
+                <CustomTable
                     headers={["رقم الملف", "نوع الملف", "تاريخ الإصدار", "تاريخ التحديث", "الحالة", "الإجراءات"]}
                     rows={disputeRows}
                     loading={false}
